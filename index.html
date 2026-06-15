@@ -15,11 +15,7 @@
   <body>
     <main class="page">
       <section class="hero reveal" aria-label="Десерт 2.0">
-        <img
-          class="hero__image"
-          src="img/11.png"
-          alt="Десерт 2.0"
-        />
+        <img class="hero__image" src="img/11.png" alt="Десерт 2.0" />
       </section>
 
       <section class="about reveal" id="about">
@@ -39,45 +35,51 @@
             идеального момента.
           </p>
 
-          <article class="method method--layers reveal-item">
-            <h2 class="section-title">Всё по слоям</h2>
-            <p class="text">
-              Это классика. Мы выкладываем ингредиенты друг на друга: снизу
-              хрустящая основа, потом нежный крем, а сверху — свежие ягоды или
-              шоколад.
-            </p>
-            <img
-              class="method__image"
-              src="img/Group 7.png"
-              alt="Десерт, собранный слоями"
-            />
-          </article>
+          <div class="about-slider reveal-item">
+            <h2 class="about-slider__title">Вариации конструктора</h2>
 
-          <article class="method method--pizza reveal-item">
-            <h2 class="section-title">Как пицца</h2>
-            <p class="text">
-              Не можете выбрать между клубникой и шоколадом? И не нужно! Мы
-              делим десерт на 4 части (сектора), и в каждой делаем свой вкус.
-            </p>
-            <img
-              class="method__image"
-              src="img/Group 6.png"
-              alt="Десерт, разделенный на четыре вкуса"
-            />
-          </article>
+            <div class="about-slider__stage">
+              <div class="about-slider__media">
+                <img
+                  class="about-slider__image"
+                  id="about-slide-image"
+                  src="img/Group 7.png"
+                  alt="Десерт, собранный слоями"
+                />
+              </div>
 
-          <article class="method method--mix reveal-item">
-            <h2 class="section-title">Полный микс</h2>
-            <p class="text">
-              Здесь мы полностью смешиваем ингредиенты между собой. Так мы
-              делаем наши напитки и некоторые нежные начинки.
-            </p>
-            <img
-              class="method__image"
-              src="img/Group 8.png"
-              alt="Десерт с полностью смешанными ингредиентами"
-            />
-          </article>
+              <div class="about-slider__content">
+                <h3 class="about-slider__name" id="about-slide-title">
+                  Всё по слоям
+                </h3>
+                <p class="about-slider__text" id="about-slide-text">
+                  Это классика. Мы выкладываем ингредиенты друг на друга: снизу
+                  хрустящая основа, потом нежный крем, а сверху — свежие ягоды
+                  или шоколад.
+                </p>
+
+                <div
+                  class="about-slider__controls"
+                  aria-label="Переключение вариантов конструктора"
+                >
+                  <button
+                    class="about-slider__control about-slider__control--prev"
+                    type="button"
+                    aria-label="Назад"
+                  >
+                    <span aria-hidden="true"></span>
+                  </button>
+                  <button
+                    class="about-slider__control about-slider__control--next"
+                    type="button"
+                    aria-label="Вперед"
+                  >
+                    <span aria-hidden="true"></span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -86,7 +88,7 @@
           <h2 class="details__title reveal-item">Подробнее о конструкторе</h2>
 
           <div class="detail-number detail-number--one reveal-item">1</div>
-          <article class="detail-card detail-card--one reveal-item">
+          <article class="detail-card detail-card--one reveal-item" tabindex="0">
             <h3>Выбор основы</h3>
             <p>
               Выберите базу для вашего десерта: нежный чизкейк, воздушный мусс
@@ -95,7 +97,10 @@
           </article>
 
           <div class="detail-number detail-number--two reveal-item">2</div>
-          <article class="detail-card detail-card--two detail-card--light reveal-item">
+          <article
+            class="detail-card detail-card--two detail-card--light reveal-item"
+            tabindex="0"
+          >
             <h3>Способ сочетания вкусов</h3>
             <p>
               Решите, как будут расположены ингредиенты: выберите десерт по
@@ -105,16 +110,22 @@
           </article>
 
           <div class="detail-number detail-number--three reveal-item">3</div>
-          <article class="detail-card detail-card--three reveal-item">
+          <article
+            class="detail-card detail-card--three reveal-item"
+            tabindex="0"
+          >
             <h3>Начинки и текстуры</h3>
             <p>
-              Добавьте яркие вкусовые ноты и хрустящие элементы: ягодный
-              конфи, тягучую карамель, дробленые орехи или шоколадные завитки.
+              Добавьте яркие вкусовые ноты и хрустящие элементы: ягодный конфи,
+              тягучую карамель, дробленые орехи или шоколадные завитки.
             </p>
           </article>
 
           <div class="detail-number detail-number--four reveal-item">4</div>
-          <article class="detail-card detail-card--four detail-card--light reveal-item">
+          <article
+            class="detail-card detail-card--four detail-card--light reveal-item"
+            tabindex="0"
+          >
             <h3>Авторские акценты</h3>
             <p>
               Украсьте композицию свежими ягодами, съедобными цветами или
@@ -123,7 +134,10 @@
           </article>
 
           <div class="detail-number detail-number--five reveal-item">5</div>
-          <article class="detail-card detail-card--five reveal-item">
+          <article
+            class="detail-card detail-card--five reveal-item"
+            tabindex="0"
+          >
             <h3>Готовый шедевр</h3>
             <p>
               Ваш уникальный десерт собран и готов к подаче. Насладитесь
@@ -138,7 +152,13 @@
           <h2 class="created__title reveal-item">Десерты, созданные вами</h2>
 
           <div class="created__content reveal-item">
-            <h3 class="created__name">Алёна</h3>
+            <div class="created__person">
+              <div class="created__avatar" aria-hidden="true">
+                <img class="created__avatar-image" src="" alt="" />
+                <span class="created__avatar-initial">А</span>
+              </div>
+              <h3 class="created__name">Алёна</h3>
+            </div>
             <p class="created__quote">
               «Обожаю места, где можно собрать что-то под себя. Система
               смешивания вкусов здесь очень необычная, ничего подобного раньше
@@ -176,10 +196,12 @@
           <h2 class="map-section__title reveal-item">Мы на карте</h2>
           <div class="map-section__map reveal-item" id="map"></div>
           <div class="map-section__info reveal-item">
-            <h3 class="map-section__point-title" id="map-point-title">Невский проспект, 28</h3>
+            <h3 class="map-section__point-title" id="map-point-title">
+              Невский проспект, 28
+            </h3>
             <p class="map-section__point-text" id="map-point-text">
-              Пространство в самом центре города для быстрых встреч, десертов навынос и вечерних
-              заказов.
+              Пространство в самом центре города для быстрых встреч, десертов
+              навынос и вечерних заказов.
             </p>
           </div>
         </div>
@@ -187,7 +209,9 @@
 
       <section class="subscribe reveal">
         <div class="grid subscribe__grid">
-          <h2 class="subscribe__title reveal-item">Будьте в курсе самого сладкого</h2>
+          <h2 class="subscribe__title reveal-item">
+            Будьте в курсе самого сладкого
+          </h2>
 
           <form class="subscribe__form reveal-item">
             <p class="subscribe__text">
@@ -206,7 +230,9 @@
               <input type="email" name="email" placeholder="Почта" required />
             </label>
 
-            <button class="subscribe__button" type="submit">Быть в курсе!</button>
+            <button class="subscribe__button" type="submit">
+              Быть в курсе!
+            </button>
           </form>
 
           <img
@@ -227,13 +253,17 @@
                   d="M39 11C42.6 30.8 47.2 35.4 67 39C47.2 42.6 42.6 47.2 39 67C35.4 47.2 30.8 42.6 11 39C30.8 35.4 35.4 30.8 39 11Z"
                 />
               </svg>
-           <a class="footer__icon footer__icon--vk" href="https://vk.com/club238663750" aria-label="ВКонтакте">
-			  <img src="img/vk-svgrepo-com.svg" alt="" />
-			</a>
-
-			<a class="footer__icon footer__icon--tg" href="#" aria-label="Telegram">
-			  <img src="img/telegram-svgrepo-com (1).svg" alt="" />
-			</a>
+            </a>
+            <a
+              class="footer__icon footer__icon--vk"
+              href="https://vk.com/club238663750"
+              aria-label="ВКонтакте"
+            >
+              <img src="img/vk-svgrepo-com.svg" alt="" />
+            </a>
+            <a class="footer__icon footer__icon--tg" href="#" aria-label="Telegram">
+              <img src="img/telegram-svgrepo-com (1).svg" alt="" />
+            </a>
           </div>
 
           <div class="footer__links">
@@ -250,16 +280,44 @@
             ×
           </button>
           <h2>Готово!</h2>
-          <p>Спасибо, ваши данные отправлены. Скоро поделимся самым сладким.</p>
+          <p>
+            Спасибо, ваши данные отправлены. Скоро поделимся самым сладким.
+          </p>
         </div>
       </div>
     </main>
 
     <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=YOUR_API_KEY"></script>
     <script>
+      const aboutSlides = [
+        {
+          title: "Всё по слоям",
+          text:
+            "Это классика. Мы выкладываем ингредиенты друг на друга: снизу хрустящая основа, потом нежный крем, а сверху — свежие ягоды или шоколад.",
+          image: "img/Group 7.png",
+          alt: "Десерт, собранный слоями",
+        },
+        {
+          title: "По секциям",
+          text:
+            "Не можете выбрать между клубникой и шоколадом? И не нужно! Мы делим десерт на 4 части (сектора), и в каждой делаем свой вкус.",
+          image: "img/Group 6.png",
+          alt: "Десерт, разделенный на четыре вкуса",
+        },
+        {
+          title: "Полный микс",
+          text:
+            "Здесь мы полностью смешиваем ингредиенты между собой. Так мы делаем наши напитки и некоторые нежные начинки.",
+          image: "img/Group 8.png",
+          alt: "Десерт с полностью смешанными ингредиентами",
+        },
+      ];
+
       const slides = [
         {
           name: "Алёна",
+          avatar: "А",
+          avatarImage: "",
           quote:
             "«Обожаю места, где можно собрать что-то под себя. Система смешивания вкусов здесь очень необычная, ничего подобного раньше не пробовала. Очень красиво и, главное, безумно вкусно!»",
           image: "img/2.png",
@@ -267,6 +325,8 @@
         },
         {
           name: "Мария",
+          avatar: "М",
+          avatarImage: "",
           quote:
             "«Я выбрала основу чизкейка, добавила ягоды и карамель. Получился десерт, который выглядит как маленький арт-объект, но при этом остается очень нежным и понятным по вкусу.»",
           image: "img/1.png",
@@ -274,6 +334,8 @@
         },
         {
           name: "Илья",
+          avatar: "И",
+          avatarImage: "",
           quote:
             "«Понравилось, что можно не спорить с собой и собрать сразу несколько вкусов. В одной части шоколад, в другой ягоды, в третьей орехи — идеальный вариант для компании.»",
           image: "img/3.png",
@@ -281,23 +343,72 @@
         },
       ];
 
+      const aboutSlideImage = document.getElementById("about-slide-image");
+      const aboutSlideTitle = document.getElementById("about-slide-title");
+      const aboutSlideText = document.getElementById("about-slide-text");
+      const aboutPrevButton = document.querySelector(".about-slider__control--prev");
+      const aboutNextButton = document.querySelector(".about-slider__control--next");
+
       const nameElement = document.querySelector(".created__name");
+      const avatarElement = document.querySelector(".created__avatar");
+      const avatarImageElement = document.querySelector(".created__avatar-image");
+      const avatarInitialElement = document.querySelector(".created__avatar-initial");
       const quoteElement = document.querySelector(".created__quote");
       const imageElement = document.querySelector(".created__image");
       const prevButton = document.querySelector(".created__control--prev");
       const nextButton = document.querySelector(".created__control--next");
+      const detailCards = document.querySelectorAll(".detail-card");
+      const detailNumbers = document.querySelectorAll(".detail-number");
       const subscribeForm = document.querySelector(".subscribe__form");
       const successModal = document.querySelector(".success-modal");
       const successClose = document.querySelector(".success-modal__close");
+
+      let currentAboutSlide = 0;
       let currentSlide = 0;
+
+      function renderAboutSlide(index) {
+        const slide = aboutSlides[index];
+        aboutSlideImage.src = slide.image;
+        aboutSlideImage.alt = slide.alt;
+        aboutSlideTitle.textContent = slide.title;
+        aboutSlideText.textContent = slide.text;
+      }
 
       function renderSlide(index) {
         const slide = slides[index];
         nameElement.textContent = slide.name;
+        avatarInitialElement.textContent = slide.avatar;
+        avatarElement.dataset.tone = String(index + 1);
+
+        if (slide.avatarImage) {
+          avatarImageElement.src = slide.avatarImage;
+          avatarImageElement.alt = "";
+          avatarElement.classList.add("created__avatar--has-image");
+        } else {
+          avatarImageElement.removeAttribute("src");
+          avatarElement.classList.remove("created__avatar--has-image");
+        }
+
         quoteElement.textContent = slide.quote;
         imageElement.src = slide.image;
         imageElement.alt = slide.alt;
       }
+
+      avatarImageElement.addEventListener("error", () => {
+        avatarElement.classList.remove("created__avatar--has-image");
+        avatarImageElement.removeAttribute("src");
+      });
+
+      aboutPrevButton.addEventListener("click", () => {
+        currentAboutSlide =
+          (currentAboutSlide - 1 + aboutSlides.length) % aboutSlides.length;
+        renderAboutSlide(currentAboutSlide);
+      });
+
+      aboutNextButton.addEventListener("click", () => {
+        currentAboutSlide = (currentAboutSlide + 1) % aboutSlides.length;
+        renderAboutSlide(currentAboutSlide);
+      });
 
       prevButton.addEventListener("click", () => {
         currentSlide = (currentSlide - 1 + slides.length) % slides.length;
@@ -308,6 +419,33 @@
         currentSlide = (currentSlide + 1) % slides.length;
         renderSlide(currentSlide);
       });
+
+      function setActiveDetail(index) {
+        detailCards.forEach((card, cardIndex) => {
+          card.classList.toggle("detail-card--active", cardIndex === index);
+        });
+
+        detailNumbers.forEach((number, numberIndex) => {
+          number.classList.toggle("detail-number--active", numberIndex === index);
+        });
+      }
+
+      detailCards.forEach((card, index) => {
+        card.addEventListener("click", () => {
+          setActiveDetail(index);
+        });
+
+        card.addEventListener("keydown", (event) => {
+          if (event.key === "Enter" || event.key === " ") {
+            event.preventDefault();
+            setActiveDetail(index);
+          }
+        });
+      });
+
+      renderAboutSlide(0);
+      renderSlide(0);
+      setActiveDetail(0);
 
       subscribeForm.addEventListener("submit", (event) => {
         event.preventDefault();
@@ -329,10 +467,41 @@
         }
       });
 
+      const textTargets = document.querySelectorAll(
+        ".about__title, .text--first, .text--second, .about-slider__title, .about-slider__name, .about-slider__text, .details__title, .created__title, .created__name, .created__quote, .map-section__title, .map-section__point-title, .map-section__point-text, .subscribe__title, .subscribe__text"
+      );
+
+      textTargets.forEach((element) => {
+        const text = element.textContent.trim();
+        const words = text.split(/\s+/);
+        element.classList.add("reveal-text");
+        element.textContent = "";
+
+        words.forEach((word, index) => {
+          const span = document.createElement("span");
+          span.className = "word";
+          span.textContent = word;
+          span.style.transitionDelay = `${index * 0.045}s`;
+          span.style.setProperty("--assemble-x", `${(index % 3 - 1) * 18}px`);
+          span.style.setProperty("--assemble-y", `${index % 2 === 0 ? 18 : -18}px`);
+          span.style.setProperty("--assemble-r", `${index % 2 === 0 ? -7 : 7}deg`);
+          element.appendChild(span);
+
+          if (index < words.length - 1) {
+            element.appendChild(document.createTextNode(" "));
+          }
+        });
+      });
+
       const animatedElements = document.querySelectorAll(".reveal, .reveal-item");
+      const animatedText = document.querySelectorAll(".reveal-text");
 
       if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
         animatedElements.forEach((element) => {
+          element.classList.add("is-visible");
+        });
+
+        animatedText.forEach((element) => {
           element.classList.add("is-visible");
         });
       } else {
@@ -352,6 +521,10 @@
         );
 
         animatedElements.forEach((element) => {
+          revealObserver.observe(element);
+        });
+
+        animatedText.forEach((element) => {
           revealObserver.observe(element);
         });
       }
