@@ -366,17 +366,53 @@
       let currentAboutSlide = 0;
       let currentSlide = 0;
 
+      const hangingWords = new Set([
+        "а",
+        "в",
+        "во",
+        "и",
+        "к",
+        "ко",
+        "на",
+        "не",
+        "но",
+        "о",
+        "об",
+        "от",
+        "по",
+        "с",
+        "со",
+        "у",
+      ]);
+
+      function protectHangingPrepositions(text) {
+        return text.replace(
+          /(^|[\s([«„“])([А-Яа-яЁё]{1,2})\s+/g,
+          (match, prefix, word) => {
+            if (!hangingWords.has(word.toLowerCase())) {
+              return match;
+            }
+
+            return `${prefix}${word}\u00A0`;
+          }
+        );
+      }
+
+      function normalizeTypography(text) {
+        return protectHangingPrepositions(text.trim().replace(/\s+/g, " "));
+      }
+
       function renderAboutSlide(index) {
         const slide = aboutSlides[index];
         aboutSlideImage.src = slide.image;
         aboutSlideImage.alt = slide.alt;
-        aboutSlideTitle.textContent = slide.title;
-        aboutSlideText.textContent = slide.text;
+        aboutSlideTitle.textContent = normalizeTypography(slide.title);
+        aboutSlideText.textContent = normalizeTypography(slide.text);
       }
 
       function renderSlide(index) {
         const slide = slides[index];
-        nameElement.textContent = slide.name;
+        nameElement.textContent = normalizeTypography(slide.name);
         avatarInitialElement.textContent = slide.avatar;
         avatarElement.dataset.tone = String(index + 1);
 
@@ -389,7 +425,7 @@
           avatarElement.classList.remove("created__avatar--has-image");
         }
 
-        quoteElement.textContent = slide.quote;
+        quoteElement.textContent = normalizeTypography(slide.quote);
         imageElement.src = slide.image;
         imageElement.alt = slide.alt;
       }
@@ -471,9 +507,17 @@
         ".about__title, .text--first, .text--second, .about-slider__title, .about-slider__name, .about-slider__text, .details__title, .created__title, .created__name, .created__quote, .map-section__title, .map-section__point-title, .map-section__point-text, .subscribe__title, .subscribe__text"
       );
 
+      const plainTextTargets = document.querySelectorAll(
+        ".detail-card p, .footer__links a, .footer__links p, .subscribe__button, .success-modal__card h2, .success-modal__card p"
+      );
+
+      plainTextTargets.forEach((element) => {
+        element.textContent = normalizeTypography(element.textContent);
+      });
+
       textTargets.forEach((element) => {
-        const text = element.textContent.trim();
-        const words = text.split(/\s+/);
+        const text = normalizeTypography(element.textContent);
+        const words = text.split(" ");
         element.classList.add("reveal-text");
         element.textContent = "";
 
@@ -575,8 +619,8 @@
               return;
             }
 
-            mapPointTitle.textContent = place.title;
-            mapPointText.textContent = place.description;
+            mapPointTitle.textContent = normalizeTypography(place.title);
+            mapPointText.textContent = normalizeTypography(place.description);
           };
 
           updateMapPoint(places[0]);
